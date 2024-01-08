@@ -36,20 +36,6 @@ buskers.forEach((x)=>{
 let state = false;
 
 
-function broadcast(x){
-if(state==true){
-  x = new google.maps.Marker({
-		position: {lat: 40.700, lng: -73.9171},
-    //{lat: parseInt(window.prompt('Insert Lat')), lng: parseInt(window.prompt('Insert Long'))},
-		map: map,
-		animation: google.maps.Animation.DROP,
-    title:'Artist: Lil Wayne, Genre: Hiphop, Soundcloud: www.soundcloud.com/lilwayne'
-		//icon: img
-	});
-}
-  else{alert('Busking Ended!')}
-  
-}
 
 var point = new google.maps.LatLng(40.7010, -73.9120);
     var data = "Hello World!";
@@ -128,3 +114,19 @@ btns.onclick = (e)=>{
 
 	
 }
+
+function broadcast(x){
+if(state==true){
+  x = new google.maps.Marker({
+		position: {lat: 40.700, lng: -73.9171},
+    //{lat: parseInt(window.prompt('Insert Lat')), lng: parseInt(window.prompt('Insert Long'))},
+		map: map,
+		animation: google.maps.Animation.DROP,
+    title:'Artist: Lil Wayne, Genre: Hiphop, Soundcloud: www.soundcloud.com/lilwayne'
+		//icon: img
+	});
+}
+  else{alert('Busking Ended!')}
+  
+}
+

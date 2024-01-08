@@ -104,9 +104,10 @@ function handleClick(e){
 let btns = document.getElementById("pulse")
 
 btns.onclick = ()=>{
+	 state = !state;
   btns.classList.toggle('button-ani');
   console.log(e);
-  state = !state;
+ 
   alert('Busking Status Set to '+state);
 	buskers.push(this);	
 	let msg = 'Currently Busking='+buskers.length;

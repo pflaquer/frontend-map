@@ -117,7 +117,7 @@ btns.onclick = (e)=>{
 }
 
 function broadcast(x){
-if(state==true){
+//if(state==true){
   x = new google.maps.Marker({
 		position: {lat: 40.700, lng: -73.9171},
     //{lat: parseInt(window.prompt('Insert Lat')), lng: parseInt(window.prompt('Insert Long'))},
@@ -126,8 +126,8 @@ if(state==true){
     title:'Artist: Lil Wayne, Genre: Hiphop, Soundcloud: www.soundcloud.com/lilwayne'
 		//icon: img
 	});
-}
-  else{alert('Busking Ended!')}
+//}
+  //else{alert('Busking Ended!')}
   
 }
 

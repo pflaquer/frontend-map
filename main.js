@@ -103,7 +103,7 @@ function handleClick(e){
 
 let btns = document.getElementById("pulse")
 
-btns.onclick = (e)=>{
+btns.onclick = ()=>{
   btns.classList.toggle('button-ani');
   console.log(e);
   state = !state;

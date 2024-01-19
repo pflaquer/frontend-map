@@ -121,9 +121,10 @@ btns.onclick = (e)=>{
 }
 
 function broadcast(x){
+	let lngs = -73.9171+.001
 //if(state==true){
   x = new google.maps.Marker({
-		position: {lat: 40.700, lng: -73.9171},
+		position: {lat: 40.700, lng: lngs},
     //{lat: parseInt(window.prompt('Insert Lat')), lng: parseInt(window.prompt('Insert Long'))},
 		map: map,
 		animation: google.maps.Animation.DROP,

@@ -14,7 +14,9 @@ window.onload = function() {
 
 let buskers = [
 	{lat: 40.6958, lng: -73.9171},
-	{lat: 40.6960, lng: -73.9120}
+	{lat: 40.6960, lng: -73.9120},
+	{lat: 40.6400, lng: -73.9171},
+	{lat: 40.700, lng: -73.6230}
 
 ];
   

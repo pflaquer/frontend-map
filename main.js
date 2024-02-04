@@ -1,6 +1,6 @@
 var map = null;
 var buskers = [];
-function initMap()={
+function initMap(){
 	alert('OK');
 }
 window.onload = function() {

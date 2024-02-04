@@ -145,12 +145,11 @@ btns.onclick = (e)=>{
 		//icon: img
 	});
 
-      
-      
-    
-	
+}
 
-	
+
+let load = (x)=>{
+	alert(x)
 }
 
 

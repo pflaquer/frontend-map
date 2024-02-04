@@ -10,7 +10,7 @@
 #mapa {
   position: relative;
   width: 100vw;
-  height: 85vh;
+  height: 90%;
   background: red;
   overflow: hidden; }
   #mapa #lista {

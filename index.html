@@ -8,33 +8,41 @@
 </head>
 <body>
 
-<div id="top" >
+<!--<div id="top" >
   <center><a id="broadcast" onclick="broadcast()">
     <center>
-    <div class="pulse" id="pulse"><i class="fa-solid fa-location-dot" style="color:white;filter:drop-shadow(7px 5px 2px black);" aria-hidden="true"></i></div>
+    <div class="pulse" id="pulse"><i class="fa-solid fa-location-dot" style="color:white;filter:drop-shadow(7px 5px 2px black);font-size:30px;" aria-hidden="true"></i></div>
+
     </center>
     
     
     
-  </a></div></center>
+  </a></div></center>-->
+
+<div id="view">
 <div id="mapa">
 	
 	
 	<div id="map"></div>
 </div>
-
+</div>
 
   
   <nav action="">
     <ul>
-      <li><i class="fa-solid fa-house navs" onclick="handleClick()"></i></li>
-      <li><i class="fa-solid fa-magnifying-glass navs" onclick="handleClick()"></i></li>
-      <li><i class="fa-solid fa-location-dot navs" onclick="handleClick()"></i>
+      <li class="navitem"><i class="fa-solid fa-house navs" onclick="handleClick(this.key)" key="Home"></i></li>
+      <li class="navitem"><i class="fa-solid fa-magnifying-glass navs" onclick="handleClick(load)"></i></li>
+      <li><i class="fa-solid fa-location-dot navs" onclick="handleClick(load)" id="pulse"></i>
       
-      <li><i class="fa-solid fa-right-from-bracket navs" onclick="handleClick()"></i></li>
+      <li><i class="fa-solid fa-right-from-bracket navs" onclick="handleClick(load)"></i></li>
     </ul>
    
   </nav>
+  
+  
+
+
+	
 
  <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrfXPptz9MDwanCiLa-YzfsG5hmNAaJxI&callback=initMap">

@@ -1,9 +1,6 @@
 var map = null;
 var buskers = [];
-let google;
-function initMap(){
-	alert('OK');
-}
+
 window.onload = function() {
 	
 	var myOptions = {

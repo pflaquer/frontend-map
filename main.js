@@ -131,6 +131,7 @@ document.querySelector("#navitem").forEach((x)=>{
 let btns = document.getElementById("pulse")
 
 btns.onclick = (e)=>{
+	alert('working');
   btns.classList.toggle('button-ani');
   console.log(e);
   state = !state;

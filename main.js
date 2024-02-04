@@ -14,11 +14,7 @@ window.onload = function() {
 
 let buskers = [
 	{lat: 40.6958, lng: -73.9171},
-	{lat: 40.6960, lng: -73.9120},
-	{lat: 40.6400, lng: -73.9171},
-	{lat: 40.7001, lng: -73.6230},
-	{lat: 40.6200, lng: -73.9771},
-	{lat: 40.4009, lng: -73.6130}
+	{lat: 40.6960, lng: -73.9120}
 
 ];
   
@@ -40,6 +36,20 @@ buskers.forEach((x)=>{
 let state = false;
 
 
+function broadcast(x){
+if(state==true){
+  x = new google.maps.Marker({
+		position: {lat: 40.700, lng: -73.9171},
+    //{lat: parseInt(window.prompt('Insert Lat')), lng: parseInt(window.prompt('Insert Long'))},
+		map: map,
+		animation: google.maps.Animation.DROP,
+    title:'Artist: Lil Wayne, Genre: Hiphop, Soundcloud: www.soundcloud.com/lilwayne'
+		//icon: img
+	});
+}
+  else{alert('Busking Ended!')}
+  
+}
 
 var point = new google.maps.LatLng(40.7010, -73.9120);
     var data = "Hello World!";
@@ -61,7 +71,7 @@ google.maps.event.addListener(marker, 'click', function() {
 
 
 let counter = 0;
-
+/*
     const socket = io({
       auth: {
         serverOffset: 0
@@ -98,41 +108,52 @@ let counter = 0;
       
       
     });
-
+*/
 function handleClick(e){
-  alert(JSON.stringify(e))
+  //alert(JSON.stringify(e))
+  view.innerHTML = Home();
 }
 
+function Home(){
+  return 'You Are Home'
+}
+
+
+const view = document.getElementById("view");
+/*
+document.querySelector("#navitem").forEach((x)=>{
+  x.onclick = alert('Clicked')
+})
+*/
 
 
 let btns = document.getElementById("pulse")
 
 btns.onclick = (e)=>{
-	 state = !state;
   btns.classList.toggle('button-ani');
   console.log(e);
- 
+  state = !state;
   alert('Busking Status Set to '+state);
 	buskers.push(this);	
 	let msg = 'Currently Busking='+buskers.length;
-	
-
-	
-}
-
-function broadcast(x){
-	let lngs = -73.9171+.001
-//if(state==true){
-  x = new google.maps.Marker({
-		position: {lat: 40.700, lng: lngs},
+  
+   new google.maps.Marker({
+		position: {lat: 40.700, lng: -73.9171},
     //{lat: parseInt(window.prompt('Insert Lat')), lng: parseInt(window.prompt('Insert Long'))},
 		map: map,
 		animation: google.maps.Animation.DROP,
-    title:'Artist: Lil Wayne, Genre: Hiphop, Soundcloud: www.soundcloud.com/lilwayne'
 		//icon: img
 	});
-//}
-  //else{alert('Busking Ended!')}
-  
+
+      
+      
+    
+	
+
+	
 }
 
+
+
+
+//
